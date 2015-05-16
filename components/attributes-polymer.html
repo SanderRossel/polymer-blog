@@ -1,0 +1,15 @@
+<dom-module id="attributes-polymer">
+    <template>
+        <span>This is <span>{{firstname}}</span> <span>{{lastname}}</span>'s custom element!</span>
+    </template>
+</dom-module>
+
+<script>
+    Polymer({
+        is: "attributes-polymer",
+        properties: {
+            firstname: "",
+            lastname: ""
+        }
+    });
+</script>

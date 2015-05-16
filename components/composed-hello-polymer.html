@@ -1,0 +1,29 @@
+<link rel="import" href="hello-polymer.html">
+
+<dom-module id="composed-hello-polymer">
+    <style>
+        .invisible {
+            display: none;
+        }
+    </style>
+    <template>
+        <button id="btn">Click me!</button>
+        <div id="body">
+            <hello-polymer></hello-polymer>
+        </div>
+    </template>
+</dom-module>
+
+<script>
+    Polymer({
+        is: "composed-hello-polymer",
+        ready: function() {
+            var that = this;
+            var btn = that.$.btn;
+            btn.onclick = function() {
+                var body = that.$.body;
+                body.classList.toggle('invisible');
+            };
+        }
+    });
+</script>
